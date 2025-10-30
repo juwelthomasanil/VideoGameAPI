@@ -48,6 +48,7 @@ VideoGameAPI/
 
 🧠 How It Works
 1️⃣ Define the Model
+
 public class VideoGame
 {
     public int Id { get; set; }
@@ -58,6 +59,7 @@ public class VideoGame
 }
 
 2️⃣ Configure the DbContext
+
 public class VideoGameDbContext : DbContext
 {
     public VideoGameDbContext(DbContextOptions<VideoGameDbContext> options) : base(options) { }
@@ -81,10 +83,12 @@ public class VideoGameDbContext : DbContext
 }
 
 3️⃣ Register DbContext in Program.cs
+
 builder.Services.AddDbContext<VideoGameDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 4️⃣ Configure Connection String
+
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost\\SQLExpress;Database=VideoGameDb;Trusted_Connection=true;TrustServerCertificate=true;"
 }
