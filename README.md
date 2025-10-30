@@ -20,6 +20,7 @@ This project demonstrates how to create, read, update, and delete video game rec
 ✅ RESTful API Design with proper HTTP Status Codes
 
 ⚙️ Tech Stack
+
 Layer	Technology
 Backend	.NET 9 (C#, ASP.NET Core Web API)
 ORM	Entity Framework Core
@@ -103,6 +104,7 @@ builder.Services.AddDbContext<VideoGameDbContext>(options =>
 | DELETE | `/api/VideoGame/{id}` | Delete a video game        |
 
 🧰 Setup & Run Locally
+
 🔹 Prerequisites
 
 .NET 9 SDK
@@ -113,32 +115,22 @@ Visual Studio 2022 or VS Code
 
 🔹 Steps
 
-Clone the repository
+1. Clone the repository
+    git clone https://github.com/yourusername/VideoGameAPI.git
+    cd VideoGameAPI
 
-git clone https://github.com/yourusername/VideoGameAPI.git
-cd VideoGameAPI
-
-
-Update the connection string
-
-Open appsettings.json
-
-Change Server and Database values if needed (e.g., Server=YOURSERVERNAME)
+2. Update the connection string
+    ->Open appsettings.json
+    ->Change Server and Database values if needed (e.g., Server=YOURSERVERNAME)
 
 Run EF Core migrations
-
-Add-Migration InitialCreate
-Update-Database
+    Add-Migration InitialCreate
+    Update-Database
 
 
 Run the project
-
-dotnet run
-
-
-The API will start on:
-
-https://localhost:5001  or  http://localhost:5000
+    dotnet run    
+    The API will start on: URL from launchSettings.json
 
 🧪 Example JSON Body (POST)
 {
@@ -162,27 +154,20 @@ GET /api/VideoGame/1
 
 🧠 Understanding Code-First Migrations
 
-Add-Migration <Name> → Creates migration scripts from your model classes.
+    Add-Migration <Name> → Creates migration scripts from your model classes.
+    Update-Database → Applies those migrations to your actual SQL Server DB.
+    You don’t upload the DB to GitHub — only your migration files.
+    Anyone cloning your project can rebuild the same DB by running:
+    Update-Database
 
-Update-Database → Applies those migrations to your actual SQL Server DB.
-
-You don’t upload the DB to GitHub — only your migration files.
-
-Anyone cloning your project can rebuild the same DB by running:
-
-Update-Database
 
 💡 Future Enhancements
 
-Add validation with DataAnnotations
-
-Implement Repository Pattern
-
-Add Swagger UI (OpenAPI Documentation)
-
-Integrate JWT Authentication
-
-Deploy to Azure / AWS
+    Add validation with DataAnnotations    
+    Implement Repository Pattern    
+    Add Swagger UI (OpenAPI Documentation)    
+    Integrate JWT Authentication    
+    Deploy to Azure / AWS
 
 👤 Author
 
