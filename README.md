@@ -94,12 +94,14 @@ builder.Services.AddDbContext<VideoGameDbContext>(options =>
 }
 
 🧩 CRUD Endpoints
-Method	Endpoint	Description
-GET	/api/VideoGame	Get all video games
-GET	/api/VideoGame/{id}	Get video game by ID
-POST	/api/VideoGame	Add a new video game
-PUT	/api/VideoGame/{id}	Update existing video game
-DELETE	/api/VideoGame/{id}	Delete a video game
+| Method | Endpoint              | Description                |
+| ------ | --------------------- | -------------------------- |
+| GET    | `/api/VideoGame`      | Get all video games        |
+| GET    | `/api/VideoGame/{id}` | Get video game by ID       |
+| POST   | `/api/VideoGame`      | Add a new video game       |
+| PUT    | `/api/VideoGame/{id}` | Update existing video game |
+| DELETE | `/api/VideoGame/{id}` | Delete a video game        |
+
 🧰 Setup & Run Locally
 🔹 Prerequisites
 
