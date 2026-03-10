@@ -1,7 +1,5 @@
 ﻿using VideoGameAPI.Data;
-
-sing Microsoft.EntityFrameworkCore;
-using VideoGameAPI.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace VideoGameAPI.Services
 {
@@ -32,6 +30,13 @@ namespace VideoGameAPI.Services
             _context.VideoGames.Add(game);
             await _context.SaveChangesAsync();
             return game; // EF Core fills in the Id after saving
+        }
+
+        public async Task<VideoGame> AddAsync(VideoGame newGame)
+        {
+            _context.VideoGames.Add(newGame);
+            await _context.SaveChangesAsync();
+            return newGame;
         }
 
         public async Task<VideoGame?> UpdateAsync(int id, VideoGame updatedGame)
